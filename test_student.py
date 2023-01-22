@@ -42,7 +42,7 @@ class TestStudent(unittest.TestCase):
         
     def test_start_date(self):
         start_date = self.student.start_date
-        self.assertEqual(self.student.start_date, start_date )
+        self.assertEqual(self.student.start_date, start_date)
 
     def test_course_schedule_success(self):
         with patch("student.requests.get") as mocked_get:
