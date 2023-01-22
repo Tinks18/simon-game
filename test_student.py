@@ -40,6 +40,10 @@ class TestStudent(unittest.TestCase):
         self.student.apply_extension(5)
         self.assertEqual(self.student.end_date, old_end_date + timedelta(days=5))
         
+    def test_start_date(self):
+        start_date = self.student.start_date
+        self.assertEqual(self.student.start_date, start_date )
+
     def test_course_schedule_success(self):
         with patch("student.requests.get") as mocked_get:
             mocked_get.return_value.ok = True

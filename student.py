@@ -26,6 +26,9 @@ class Student:
     def apply_extension(self, days):
         self.end_date += timedelta(days=days)
 
+    def start_date(self, day):
+        self.start_date = timedelta(day)
+
     def course_schedule(self):
         response = requests.get(
             f"https://company.com/course-schedule/{self._last_name}/{self._first_name}")
